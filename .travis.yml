@@ -16,4 +16,4 @@ install:
 
 script:
   - pipenv run flake8
-  - pytest sitedjango
+  - pytest
