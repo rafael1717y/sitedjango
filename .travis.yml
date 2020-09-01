@@ -13,8 +13,14 @@ env:
 install:
   - pip install pipenv
   - pipenv sync -d
+  - pip install codecov
 
 script:
   - pipenv run flake8
   - pytest
+
+after_success:
+  - codecov
+
+
 
