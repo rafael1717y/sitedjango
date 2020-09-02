@@ -17,10 +17,10 @@ install:
 
 script:
   - pipenv run flake8
-  - pipenv run pytest
+  - pipenv run pytest --cov=pysite
 
 after_success:
-  - codecov
+  - pipenv run codecov
   - bash <(curl -s https://codecov.io/bash)
 
 
