@@ -8,5 +8,5 @@ Um site em django
 
 
 
-Suportada versão 3 do Python
+Suportada versão 3 do Python ...
 
