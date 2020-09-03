@@ -12,6 +12,7 @@ env:
 
 install:
   - pip install pipenv
+  - pipenv sync -d
   - pip install codecov
   - cp contrib/env-sample .env
 
@@ -22,6 +23,5 @@ script:
 after_success:
   - pipenv run codecov
   - bash <(curl -s https://codecov.io/bash)
-
 
 
