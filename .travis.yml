@@ -12,7 +12,6 @@ env:
 
 install:
   - pip install pipenv
-  - pipenv sync -d
   - pip install codecov
   - cp contrib/env-sample .env
 
