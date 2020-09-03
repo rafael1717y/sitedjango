@@ -14,7 +14,9 @@ install:
   - pip install pipenv
   - pipenv sync -d
   - pip install codecov
+  - pipenv install 'python-decouple'
   - cp contrib/env-sample .env
+
 
 script:
   - pipenv run flake8
