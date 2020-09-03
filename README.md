@@ -10,5 +10,5 @@ Aplicação disponível em https://pythonsitedjango20.herokuapp.com/
 
 
 
-Suportada versão 3 do Python ...
+Suportada versão 3 do Python ..
 
