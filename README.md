@@ -9,6 +9,6 @@ Aplicação disponível em https://pythonsitedjango20.herokuapp.com/
 [![codecov](https://codecov.io/gh/rafael1717y/sitedjango/branch/master/graph/badge.svg)](https://codecov.io/gh/rafael1717y/sitedjango)
 
 
-##
+###
 Suportada versão 3 do Python 
 
