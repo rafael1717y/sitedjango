@@ -131,3 +131,15 @@ dmypy.json
 #Media & static files
 staticfiles/
 mediafiles/
+
+#dynaconf settings
+/settings.yml
+/frontend/css/
+/frontend/node_modules/
+
+#no including dumps
+*.dump
+./.pytest_cache
+
+#local posgres files
+.pgdata
