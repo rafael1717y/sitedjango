@@ -13,7 +13,6 @@ codecov = "*"
 django = "*"
 gunicorn = "*"
 python-decouple = "*"
-sentry-sdk = "*"
 
 [requires]
 python_version = "3.8"

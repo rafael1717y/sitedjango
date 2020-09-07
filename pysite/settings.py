@@ -18,8 +18,6 @@ from decouple import Csv
 import dj_database_url
 from functools import partial
 import os
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -179,7 +177,3 @@ if AWS_ACCESS_KEY_ID:  # pragma: no cover
     INSTALLED_APPS.append('s3_folder_storage')
     INSTALLED_APPS.append('storages')
 
-SENTRY_DSN = config('SENTRY_DSN', default=None)
-
-if SENTRY_DSN:
-    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])

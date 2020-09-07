@@ -4,5 +4,4 @@ from django.http import HttpResponse
 
 
 def home(request):
-    raise ValueError()
     return HttpResponse('<htl><body>Olá SIMONINHA</body></hml>', content_type='text/html')
