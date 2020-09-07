@@ -5,7 +5,7 @@ import django.utils.timezone
 import pysite.base.models
 
 
-class Migration(migrations.Migration):
+class Migration(migrations.Migration):  # pragma: no cover
 
     initial = True
 
