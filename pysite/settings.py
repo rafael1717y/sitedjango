@@ -20,6 +20,10 @@ from functools import partial
 import os
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
+from decouple import Csv, config
+
+
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -183,3 +187,4 @@ SENTRY_DSN = config('SENTRY_DSN', default=None)
 
 if SENTRY_DSN:
     sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])
+
