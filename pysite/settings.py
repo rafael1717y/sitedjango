@@ -149,9 +149,6 @@ COLLECTFAST_ENABLE = False
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=False)
 
 if AWS_ACCESS_KEY_ID:  # pragma: no cover
-    COLLECTFAST_ENABLE = True
-    INSTALLED_APPS.append('s3_folder_storage')
-    INSTALLED_APPS.append('storages')
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
@@ -159,11 +156,12 @@ if AWS_ACCESS_KEY_ID:  # pragma: no cover
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
+    COLLECTFAST_ENABLED = True
     AWS_DEFAULT_ACL = 'private'
-    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
     # Static Assets
-    # --------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
@@ -176,4 +174,5 @@ if AWS_ACCESS_KEY_ID:  # pragma: no cover
     MEDIA_ROOT = f'/{DEFAULT_S3_PATH}/'
     MEDIA_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{DEFAULT_S3_PATH}/'
 
-
+    INSTALLED_APPS.append('s3_folder_storage')
+    INSTALLED_APPS.append('storages')
