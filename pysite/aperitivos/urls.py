@@ -16,17 +16,9 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
-from pysite.base.views import home
+from pysite.aperitivos.views import video
 
+app_name = 'aperitivos'
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('pysite.base.urls')),
-    path('apertivos/', include('pysite.aperitivos.urls'))
-    #path('', home, name='home'),
+    path('<slug:slug>', video, name='video')
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns.append(
-        path('__debug__/', include(debug_toolbar.urls))
-    )
