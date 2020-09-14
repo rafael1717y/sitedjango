@@ -21,7 +21,7 @@ from pysite.base.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pysite.base.urls')),
-    path('apertivos/', include('pysite.aperitivos.urls'))
+    path('aperitivos/', include('pysite.aperitivos.urls'))
     #path('', home, name='home'),
 ]
 
