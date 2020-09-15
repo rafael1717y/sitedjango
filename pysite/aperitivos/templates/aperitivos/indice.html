@@ -1,7 +1,7 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block title %}Site do Rafa - Aperitivo{% endblock title %}
-{% block description %} Página com vídeo de teste{% endblock description %}
+{% block description %} Página com todos os vídeos gratuitos{% endblock description %}
 {% block body %}
 
 <!DOCTYPE html>
@@ -25,11 +25,17 @@
 	  gtag('config', 'UA-177540018-1');
 	</script>
 	  <div class="container">
-	<div class="row">
+		  	<div class="row">
 		<div class="col-md-12">
-            '<h1>{{ video.titulo |default:"Faltando Título" }}</h1>'
-			<iframe src="https://player.vimeo.com/video/{{ video.vimeo_id}}" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
+			<h1>Lista de Vídeos Aperitivos</h1>
+			<ol>
+				{% for video in videos %}
+				<li>{{ video.titulo | default:"Faltando Título"}}</li>
+				{% empty %}
+					<li> Não foi encontrado nenhum vídeo de apertivo</li>
+				{% endfor %}
+			</ol>
+		</div>
     </div>
     </div>
 	  {% endblock body %}

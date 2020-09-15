@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
-from pysite.aperitivos.views import video
+from pysite.aperitivos.views import video, indice
 
 app_name = 'aperitivos'
 urlpatterns = [
     path('<slug:slug>', video, name='video'),
+    path('', indice, name='indice'),
+
 ]
