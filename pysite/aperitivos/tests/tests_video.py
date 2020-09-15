@@ -4,7 +4,7 @@ from django.urls import reverse
 from pysite.django_assertions import assert_contains
 
 @pytest.fixture
-def resp(client):
+def resp(client, db):
     return client.get(reverse('aperitivos:video', args=('motivacao',)))
 
 def test_status_code(resp):
