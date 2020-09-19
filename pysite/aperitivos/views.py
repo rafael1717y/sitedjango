@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+
 from pysite.aperitivos.models import Video
 
 #substituição dos dicionários pela classe
@@ -15,5 +16,5 @@ def indice(request):
     return render(request, 'aperitivos/indice.html', context={'videos': videos})
 
 def video(request, slug):
-    video = Video.objects.get(slug=slug)
+    video = get_object_or_404(Video, slug=slug)
     return render(request, 'aperitivos/video.html', context={'video': video})
