@@ -24,28 +24,23 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="1a014487-4a99-4dce-8b79-7fa196e8ffff">
-        <schema name="pg_catalog" object-types="view, table" />
+      <connection connection-id="cbe34900-a7bb-4b24-a2e2-c8076e421142">
+        <schema name="information_schema" object-types="table, view, column, function" />
+        <schema name="pg_catalog" object-types="table, view, column, function" />
+        <schema name="public" object-types="table, view, function, sequence" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="1a014487-4a99-4dce-8b79-7fa196e8ffff">
-      <console name="Connection" type="STANDARD" schema="information_schema" session="Main" />
+    <connection id="cbe34900-a7bb-4b24-a2e2-c8076e421142">
+      <console name="postgres@localhost" type="STANDARD" schema="information_schema" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="1a014487-4a99-4dce-8b79-7fa196e8ffff" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="1a014487-4a99-4dce-8b79-7fa196e8ffff" dataset="pg_catalog.pg_statistic" active-filter-id="350ce411-3a1b-47d7-85a8-401e616ad40a">
-      <filter id="350ce411-3a1b-47d7-85a8-401e616ad40a" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="staattnum" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
+    <connection id="cbe34900-a7bb-4b24-a2e2-c8076e421142" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -70,9 +65,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="1a014487-4a99-4dce-8b79-7fa196e8ffff" active="true">
+      <connection id="cbe34900-a7bb-4b24-a2e2-c8076e421142" active="true">
         <database>
-          <name value="Connection" />
+          <name value="postgres@localhost" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
