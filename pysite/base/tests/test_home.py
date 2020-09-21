@@ -14,10 +14,10 @@ def test_status_code(resp):
 
 
 def test_title(resp):
-    assert_contains(resp, '<title>Site do Rafa</title>')
+    assert_contains(resp, '<title>Site do Rafa - Home</title>')
 
-'''
+
 ## REVER ESSE TESTE
 def test_home_link(resp):
     assert_contains(resp, f'href={reverse("base:home")}">Site do Rafa</a>')
-'''
+
