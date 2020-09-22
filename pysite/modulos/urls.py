@@ -16,18 +16,11 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
-from pysite.base.views import home
+from pysite.aperitivos.views import video, indice
+from pysite.modulos import views
 
+app_name = 'modulos'
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('pysite.base.urls')),
-    path('aperitivos/', include('pysite.aperitivos.urls')),
-    #path('', home, name='home'),
-    path('modulos/', include('pysite.modulos.urls')),
-]
+    path('<slug:slug>', views.detalhe, name='detalhe'),
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns.append(
-        path('__debug__/', include(debug_toolbar.urls))
-    )
+]
