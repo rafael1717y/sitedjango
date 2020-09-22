@@ -17,6 +17,7 @@ python-decouple = "*"
 dj-database-url = "*"
 collectfast = "*"
 psycopg2-binary = "*"
+django-ordered-model = "*"
 
 [requires]
 python_version = "3.8"
