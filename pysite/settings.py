@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pysite.base',
     'pysite.aperitivos',
+    'pysite.modulos',
 ]
 
 MIDDLEWARE = [

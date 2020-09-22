@@ -1,4 +1,3 @@
-
 import pytest
 from django.urls import reverse
 from pysite.django_assertions import assert_contains
