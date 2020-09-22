@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from pysite.modulos import facade
-# Create your views here.
+# Ver o {}
 
 
 def home(request):

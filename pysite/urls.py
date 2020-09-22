@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pysite.base.urls')),
     path('aperitivos/', include('pysite.aperitivos.urls')),
-    #path('', home, name='home'),
     path('modulos/', include('pysite.modulos.urls')),
 ]
 
